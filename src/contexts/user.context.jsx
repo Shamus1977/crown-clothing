@@ -22,5 +22,9 @@ export const UserProvider = ({children}) => {
     return unsubscribe;
   }, []);
 
+  useEffect(()=>{
+    console.log(currentUser);
+  },[currentUser])
+
   return <UserContext.Provider value={value} >{children}</UserContext.Provider>
 }
